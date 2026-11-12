@@ -17,6 +17,9 @@
   header h1 { margin:0; font-size:24pt; letter-spacing:-.5px; }
   header .role { margin:2px 0 6px; font-size:12pt; color:var(--accent); font-weight:600; }
   header .contact { color:var(--muted); font-size:9.5pt; }
+  header .contact { list-style:none; padding:0; margin:0; }
+  header .contact li { display:flex; align-items:center; gap:7px; margin:0 0 2px; }
+  header .contact svg { width:13px; height:13px; fill:var(--accent); flex:none; }
   header .contact a { color:inherit; }
   h2 { font-size:10pt; text-transform:uppercase; letter-spacing:1.2px; color:var(--accent);
     border-bottom:1.5px solid var(--line); padding-bottom:3px; margin:16px 0 8px; }
@@ -55,12 +58,13 @@
 <header>
   <h1>Elie Drai</h1>
   <div class="role">Senior Software Engineer · Tech Lead · Security &amp; Agentic AI</div>
-  <div class="contact">
-    Jerusalem, Israel ·
-    <a href="mailto:elie.drai.work@gmail.com">elie.drai.work@gmail.com</a> ·
-    <a href="https://www.linkedin.com/in/elie-drai">linkedin.com/in/elie-drai</a> ·
-    <a href="https://github.com/elied-dev">github.com/elied-dev</a>
-  </div>
+  <ul class="contact">
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Jerusalem, Israel</li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg><a href="#" class="hidden-contact" data-kind="mail" data-v="bW9jLmxpYW1nQGtyb3cuaWFyZC5laWxl">Show email</a></li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l2 .9c.3.1.4.2.5.3.1.2.1.8-.1 1.5z"/></svg><a href="#" class="hidden-contact" data-kind="wa" data-v="NTU2MiA0NDQgODUgMjc5Kw==">Show phone (WhatsApp)</a></li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 2H3.6A1.6 1.6 0 0 0 2 3.6v16.8A1.6 1.6 0 0 0 3.6 22h16.8a1.6 1.6 0 0 0 1.6-1.6V3.6A1.6 1.6 0 0 0 20.4 2zM8 19H5V9.5h3zM6.5 8.2a1.7 1.7 0 1 1 0-3.5 1.7 1.7 0 0 1 0 3.5zM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5S12.8 13 12.8 14.3V19h-3V9.5h2.8v1.3h.1a3.1 3.1 0 0 1 2.8-1.5c3 0 3.5 2 3.5 4.5z"/></svg><a href="https://www.linkedin.com/in/elie-drai">linkedin.com/in/elie-drai</a></li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.2-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg><a href="https://github.com/elied-dev">github.com/elied-dev</a></li>
+  </ul>
 </header>
 
 <h2>Profile</h2>
@@ -149,5 +153,23 @@
   </div>
 </div>
 </main>
+<script>
+  // Contacts are stored reversed + base64 so naive crawlers can't harvest them.
+  const decode = v => atob(v).split('').reverse().join('');
+  const reveal = a => {
+    const v = decode(a.dataset.v);
+    a.textContent = v;
+    a.href = a.dataset.kind === 'mail' ? 'mailto:' + v : 'https://wa.me/' + v.replace(/\D/g, '');
+    if (a.dataset.kind === 'wa') a.target = '_blank';
+    a.dataset.revealed = '1';
+  };
+  document.querySelectorAll('.hidden-contact').forEach(a => {
+    a.addEventListener('click', e => { if (!a.dataset.revealed) { e.preventDefault(); reveal(a); } });
+  });
+  // PDF build (?print) and browser printing show the real values.
+  const revealAll = () => document.querySelectorAll('.hidden-contact').forEach(reveal);
+  if (location.search.includes('print')) revealAll();
+  addEventListener('beforeprint', revealAll);
+</script>
 </body>
 </html>
