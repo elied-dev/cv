@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elie Drai — Senior Software Engineer · Tech Lead</title>
+<meta name="description" content="Elie Drai — Tech lead building security infrastructure, agentic AI and backend platforms at Mastercard (Dynamic Yield). CV.">
+<style>
+  :root { --ink:#16181d; --muted:#5b6170; --accent:#0b5cad; --line:#e3e6ec; --bg:#f4f5f7; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font:10.5pt/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  .bar { max-width:210mm; margin:24px auto 0; display:flex; justify-content:flex-end; gap:8px; }
+  .bar a { background:var(--accent); color:#fff; text-decoration:none; padding:8px 14px; border-radius:6px; font-weight:600; font-size:10pt; }
+  main { max-width:210mm; margin:12px auto 40px; background:#fff; padding:16mm 16mm 14mm;
+    box-shadow:0 2px 14px rgba(0,0,0,.08); }
+  header h1 { margin:0; font-size:24pt; letter-spacing:-.5px; }
+  header .role { margin:2px 0 6px; font-size:12pt; color:var(--accent); font-weight:600; }
+  header .contact { color:var(--muted); font-size:9.5pt; }
+  header .contact a { color:inherit; }
+  h2 { font-size:10pt; text-transform:uppercase; letter-spacing:1.2px; color:var(--accent);
+    border-bottom:1.5px solid var(--line); padding-bottom:3px; margin:16px 0 8px; }
+  p { margin:0 0 6px; }
+  ul { margin:4px 0 0; padding-left:16px; }
+  li { margin-bottom:4px; }
+  b { font-weight:650; }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:4px 14px; font-size:9.8pt; }
+  .grid span::before { content:"▸ "; color:var(--accent); }
+  .job { margin-bottom:12px; } li, .job-head { break-inside:avoid; }
+  .job-head { display:flex; justify-content:space-between; align-items:baseline; gap:8px; }
+  .job-head h3 { margin:0; font-size:11pt; }
+  .job-head .when { color:var(--muted); font-size:9.5pt; white-space:nowrap; }
+  .job .org { color:var(--muted); font-size:9.8pt; margin-bottom:3px; }
+  .ctx { font-style:italic; color:var(--muted); font-size:9.8pt; }
+  .skills div { margin-bottom:3px; }
+  .two { display:grid; grid-template-columns:1fr 1fr; gap:0 24px; }
+  @media (max-width:700px) {
+    main { padding:20px; margin:0; } .bar { margin:12px; }
+    .grid, .two { grid-template-columns:1fr; } .job-head { flex-direction:column; }
+  }
+  @page { size:A4; margin:10mm 13mm; }
+  @media print {
+    body { background:#fff; font-size:9.2pt; line-height:1.38; }
+    h2 { margin:11px 0 6px; } li { margin-bottom:2px; } .job { margin-bottom:8px; }
+    header h1 { font-size:21pt; }
+    .bar { display:none; }
+    main { box-shadow:none; margin:0; padding:0; max-width:none; }
+    a { text-decoration:none; }
+  }
+</style>
+</head>
+<body>
+<nav class="bar"><a href="Elie-Drai-CV.pdf" download>⬇ Download PDF</a></nav>
+<main>
+<header>
+  <h1>Elie Drai</h1>
+  <div class="role">Senior Software Engineer · Tech Lead · Security &amp; Agentic AI</div>
+  <div class="contact">
+    Jerusalem, Israel ·
+    <a href="mailto:elie.drai.work@gmail.com">elie.drai.work@gmail.com</a> ·
+    <a href="https://www.linkedin.com/in/elie-drai">linkedin.com/in/elie-drai</a> ·
+    <a href="https://github.com/elied-dev">github.com/elied-dev</a>
+  </div>
+</header>
+
+<h2>Profile</h2>
+<p>Tech lead who takes unclear, high-stakes problems from the first stakeholder conversation to a running production system. 7+ years building backend platforms, security infrastructure and agentic AI, at <b>Mastercard (Dynamic Yield)</b> and for <b>~15 clients</b> as an independent engineer, from global luxury houses to business-strategy consulting.</p>
+<p>VPs trust him with company-critical systems end to end: he led the authorization layer that every request to data at Dynamic Yield now goes through, and he builds the backend behind its customer-facing AI agents.</p>
+<p>Works best where engineering meets the business: he scopes with stakeholders, makes the architecture call, ships it and stays accountable for it in production.</p>
+
+<h2>Core Competencies</h2>
+<div class="grid">
+  <span>Technical leadership &amp; decisions</span>
+  <span>Customer-facing scoping &amp; delivery</span>
+  <span>Security &amp; access control</span>
+  <span>Agentic AI: agents, MCP, RAG</span>
+  <span>Microservices &amp; platform modernization</span>
+  <span>Cloud &amp; DevOps: AWS, Azure, CI/CD</span>
+  <span>Mentoring &amp; engineering standards</span>
+  <span>Production incident leadership</span>
+  <span>Cross-functional stakeholder alignment</span>
+</div>
+
+<h2>Career Highlights</h2>
+<ul>
+  <li><b>Company-wide authorization layer:</b> led the design and delivery of Dynamic Yield's authorization system on Permify. It is now the <b>mandatory access layer to data across the whole company</b>, delivered with Security, DevOps, Frontend, QA and VPs.</li>
+  <li><b>Agentic AI in production:</b> backend and infrastructure lead in a 15-person ExperienceOS taskforce that ships <b>5 customer-facing agents, 3 MCP servers and ~20 tools</b>, a footprint that keeps growing.</li>
+  <li><b>Platform modernization:</b> helped break a Ruby monolith into <b>20 NestJS microservices</b> with full CI/CD, moving the team to <b>daily releases</b>.</li>
+  <li><b>Independent delivery:</b> technical partner on a data-driven reporting platform for a business-strategy consulting firm, from scoping to production. It is <b>live with paying users</b>.</li>
+  <li><b>Luxury retail:</b> architected backends for <b>Louis Vuitton, Chanel, Clarins and Boucheron</b> projects, including a clienteling app for in-store sellers.</li>
+</ul>
+
+<h2>Professional Experience</h2>
+
+<div class="job">
+  <div class="job-head"><h3>Senior Software Developer · Tech Lead</h3><span class="when">May 2022 – Present</span></div>
+  <div class="org">Mastercard (Dynamic Yield) · Tel Aviv, Israel</div>
+  <p class="ctx">AI personalization platform acquired by Mastercard. Team of 10. Tech lead on a long run of projects with teams of ~5 engineers. Reports to the team manager, and directly to VPs on AI and security initiatives.</p>
+  <ul>
+    <li><b>Authorization platform:</b> chose to build an independent, company-owned authorization service on <b>Permify</b> so the permission model can grow without re-engineering. Led the team through infrastructure, test strategy and latency tuning. In production, it is now required for all data access company-wide.</li>
+    <li><b>Security:</b> drove cybersecurity work with the Security team, covering threat modelling, vulnerability remediation, audits and compliance.</li>
+    <li><b>Agentic AI (ExperienceOS):</b> owns backend and infrastructure in a 15-person taskforce of engineers, designers and product leaders that puts AI agents inside the product for customers. The taskforce has built 5 agents, 3 MCP servers and ~20 tools so far.</li>
+    <li><b>Modernization:</b> with fellow engineers, pushed to replace a Ruby monolith with 20 NestJS microservices and full CI/CD, cutting the release cycle to daily deploys.</li>
+    <li><b>Applied AI:</b> architected and built a RAG documentation assistant end to end, covering design, development and DevOps.</li>
+    <li><b>Customers &amp; product:</b> fixes issues raised by enterprise customer accounts and delivers features with the product team.</li>
+    <li><b>People:</b> mentors junior engineers, runs code reviews, sets team engineering standards and leads production incident response.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-head"><h3>Independent Software Engineer &amp; Technical Advisor</h3><span class="when">Apr 2019 – Present</span></div>
+  <div class="org">Freelance · Jerusalem, Israel</div>
+  <p class="ctx">~15 clients. Owns the full cycle: discovery, scoping, architecture, build and hosting.</p>
+  <ul>
+    <li><b>Strategy-consulting platform:</b> technical partner to a business-strategy consulting firm. Advised on and delivered scoping, architecture, the AI and data pipeline, and hosting for a platform that lets consultants build reliable, data-backed reports tailored to each client company. It is <b>live with paying users</b>.</li>
+    <li>Delivered websites, web applications and technical advice for ~15 clients, turning business needs into scoped, maintainable solutions.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-head"><h3>Node.js Developer &amp; Systems Architect</h3><span class="when">Sep 2020 – May 2022</span></div>
+  <div class="org">Balink · Jerusalem, Israel</div>
+  <p class="ctx">Digital agency for luxury houses including Louis Vuitton, Chanel, Clarins and Boucheron.</p>
+  <ul>
+    <li>Architected and built custom Node.js / NestJS backends on <b>Azure and AWS</b>, integrated with Salesforce, for client mobile and web applications. Led a team of up to 3 engineers.</li>
+    <li>Delivered a <b>clienteling application</b> that lets in-store sellers engage with their customers and act on customer data.</li>
+    <li>Built CI/CD pipelines and owned availability, security and scalability of the backend systems.</li>
+  </ul>
+</div>
+
+<h2>Technical Skills</h2>
+<div class="skills">
+  <div><b>Languages:</b> TypeScript / Node.js, Python, PHP, Ruby</div>
+  <div><b>Backend &amp; frontend:</b> NestJS, microservices, REST APIs, React, Next.js, Salesforce integration</div>
+  <div><b>AI:</b> LLM agents, Model Context Protocol (MCP) servers &amp; tools, RAG</div>
+  <div><b>Security:</b> authorization design (Permify, relationship-based access control), threat modelling, security audits</div>
+  <div><b>Cloud &amp; DevOps:</b> AWS, Azure, CI/CD pipelines, observability &amp; latency tuning</div>
+</div>
+
+<div class="two">
+  <div>
+    <h2>Education</h2>
+    <p><b>B.Sc. Software Engineering</b>, Lev Academic Center (JCT), 2016 – 2019<br>
+    Dean's List · HaEitanim Excellence Program</p>
+  </div>
+  <div>
+    <h2>Languages</h2>
+    <p>French (native) · English (full professional) · Hebrew (full professional)</p>
+  </div>
+</div>
+</main>
+</body>
+</html>
